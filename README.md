@@ -27,5 +27,5 @@ A modern React-based mobile application for PopX account management with authent
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/popx-mobile-app.git
+   git clone https://github.com/medamvishnu27/popx-task.git
    cd popx-mobile-app
