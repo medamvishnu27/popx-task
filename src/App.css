@@ -1,0 +1,134 @@
+/* Additional app-specific styles */
+.mobile-app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.mobile-frame {
+  width: 100%;
+  max-width: 375px;
+  height: 812px;
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Screen transitions */
+.screen-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.screen-slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.screen-slide-out {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Button hover effects */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(147, 51, 234, 0.3);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #a8a8a8 0%, #c1c1c1 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(168, 168, 168, 0.3);
+}
+
+/* Form input focus animations */
+.form-input {
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(147, 51, 234, 0.1);
+}
+
+/* Profile image container */
+.profile-image-container {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.profile-image-container:hover {
+  transform: scale(1.05);
+}
+
+/* Success/Error message styles */
+.success-message {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+.error-message {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Loading spinner */
+.loading-spinner {
+  border: 2px solid #f3f4f6;
+  border-top: 2px solid #8b5cf6;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+  .mobile-app-container {
+    padding: 0;
+  }
+  
+  .mobile-frame {
+    border-radius: 0;
+    height: 100vh;
+    max-height: 100vh;
+  }
+}
