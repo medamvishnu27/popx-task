@@ -9,7 +9,7 @@ import AccountSettingsScreen from './components/screens/AccountSettingsScreen';
 
 const App = () => {
   const { isAuthenticated, user, login, register, logout, updateUser } = useAuth();
-  const [currentScreen, setCurrentScreen] = useState(4);
+  const [currentScreen, setCurrentScreen] = useState(1);
 
   const handleNext = () => {
     if (currentScreen < 4) {
